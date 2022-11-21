@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.elemodel.mapper.DicStudentstatusMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.elemodel.entity.DicStudentstatus">
+        <id column="id" property="id" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, status
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">dic_studentstatus</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">dic_studentstatus as studentstatus</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

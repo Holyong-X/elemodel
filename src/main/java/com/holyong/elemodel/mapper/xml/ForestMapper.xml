@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.elemodel.mapper.ForestMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.elemodel.entity.Forest">
+        <id column="forest_id" property="forestId" />
+        <result column="SMID" property="smid" />
+        <result column="forest_name" property="forestName" />
+        <result column="river_area" property="riverArea" />
+        <result column="type" property="type" />
+        <result column="respons" property="respons" />
+        <result column="phone" property="phone" />
+        <result column="post" property="post" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        forest_id, SMID, forest_name, river_area, type, respons, phone, post
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">forest</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">forest as forest</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

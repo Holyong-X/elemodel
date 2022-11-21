@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.elemodel.mapper.RoadMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.elemodel.entity.Road">
+        <id column="road_id" property="roadId" />
+        <result column="SMID" property="smid" />
+        <result column="road_name" property="roadName" />
+        <result column="road_code" property="roadCode" />
+        <result column="road_length" property="roadLength" />
+        <result column="road_level" property="roadLevel" />
+        <result column="time" property="time" />
+        <result column="respons" property="respons" />
+        <result column="phone" property="phone" />
+        <result column="post" property="post" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        road_id, SMID, road_name, road_code, road_length, road_level, time, respons, phone, post
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">road</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">road as road</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

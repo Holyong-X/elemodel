@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.elemodel.mapper.HouseMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.elemodel.entity.House">
+        <id column="house_id" property="houseId" />
+        <result column="SMID" property="smid" />
+        <result column="mumber" property="mumber" />
+        <result column="owner" property="owner" />
+        <result column="certificate_number" property="certificateNumber" />
+        <result column="type" property="type" />
+        <result column="rooms" property="rooms" />
+        <result column="time" property="time" />
+        <result column="floors" property="floors" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        house_id, SMID, mumber, owner, certificate_number, type, rooms, time, floors
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">house</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">house as house</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>
